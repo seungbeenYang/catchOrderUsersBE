@@ -1,8 +1,8 @@
-
 {
   "scripts": {
     "dev": "nodemon --watch index.js --watch src/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettify": "prettier --write *.js **/*.js"
   },
   "type": "module",
   "dependencies": {
@@ -14,7 +14,9 @@
     "multer": "^1.4.5-lts.1",
     "multer-s3": "^3.0.1",
     "mysql2": "^3.11.4",
-    "nodemon": "^3.1.7",
-    "prettier": "^3.3.3"
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.1"
   }
 }

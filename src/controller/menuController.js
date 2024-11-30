@@ -4,7 +4,7 @@ import apiResponse from "../dto/apiResponse.js";
 
 const menuController = express.Router();
 
-menuController.get('/View', async (req, res,next) => {
+menuController.get('/View', async (req, res, next) => {
     try {
         //메뉴 데이터 조회
         const menu = await menuRepository.getAvailableMenu();
@@ -14,9 +14,9 @@ menuController.get('/View', async (req, res,next) => {
             message: "성공적으로 조회하였습니다.",
             result: menu
         }));
-    }catch (error) {
+    } catch (error) {
         console.error("Error getting menu", error);
-       // next(error);
+        // next(error);
     }
 });
 export default menuController;
