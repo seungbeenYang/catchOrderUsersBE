@@ -1,9 +1,8 @@
 create table menu (
-    cook_id INT auto_increment primary key,
+    cookId INT auto_increment primary key,
     name varchar(50) not null,
     description text,
     price decimal(10, 2) not null,
-    category varchar(50),
     available boolean default true,
-    image_url varchar(255)
+    imageUrl varchar(255) not null
     );
