@@ -1,10 +1,10 @@
 import express from 'express';
-import menuRepository from "../repository/menuRepository";
-import apiResponse from "../dto/apiResponse";
+import menuRepository from "../repository/menuRepository.js";
+import apiResponse from "../dto/apiResponse.js";
 
 const menuController = express.Router();
 
-menuController.get('/api/menu', async (req, res,next) => {
+menuController.get('/View', async (req, res,next) => {
     try {
         //메뉴 데이터 조회
         const menu = await menuRepository.getAvailableMenu();
@@ -18,4 +18,5 @@ menuController.get('/api/menu', async (req, res,next) => {
         console.error("Error getting menu", error);
        // next(error);
     }
-})
+});
+export default menuController;
